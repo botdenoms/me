@@ -1,13 +1,13 @@
-import {useState} from 'react'
 import denomsLogo from '../assets/black.svg'
 import Footer from './Footer'
 
-function Hero() {
-
-    const [hero, setHero] = useState(true)
+function Hero({handler = false}) {
 
     const worksHandler = () => {
-        setHero(false)
+        if(handler == false){
+            return
+        }
+        handler()
     }
     
     return (
@@ -21,7 +21,7 @@ function Hero() {
                     <span>Dennis Moseti</span>
                 </div>
             </div>
-            <button onClick={()=>{worksHandler}}>Works</button>
+            <button onClick={()=>{worksHandler()}}>Works</button>
             <Footer />
         </div>
     )

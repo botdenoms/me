@@ -71,6 +71,90 @@ button{
   font-weight: bold;
 }
 
+.showcase{
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.appbar{
+  position: fixed;
+  padding: 10px 20px ;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.appbar .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appbar .sml{
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+}
+
+.links{
+  display: flex;
+  align-items: center;
+}
+
+.link{
+  margin: 8px;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.link img{
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+select{
+  padding: 8px;
+  border-radius: 5px;
+  color: #000;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  background: #fff;
+}
+
+.mobile{
+  display: none;
+}
+
+.tooltip{
+  display: none;
+  padding: 4px 8px;
+  background: #000;
+  font-size: 11px;
+  color: #fff;
+  user-select: none;
+  width: fit-content;
+}
+
+.link:hover .tooltip{
+  display: block;
+}
+
+.main{
+  height: 800px;
+}
+
+.endnote{
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  font-size: 11px;
+  color: #000;
+}
+
 @media screen and (max-width: 600px){
   .hero .container{
     display: flex;
@@ -85,6 +169,15 @@ button{
 
   button{
     margin: 10px;
+  }
+
+  .appbar .links{
+    display: none;
+  }
+
+  .appbar .mobile{
+    display: flex;
+    justify-content: center;
   }
   
 }
