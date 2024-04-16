@@ -3,3 +3,88 @@
   height: 100vh;
 }
 
+.hero{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .container{
+  display: flex;
+  align-items: center;
+}
+
+.hero .container .content{
+  display: flex;
+  flex-direction: column;
+}
+
+.hero .container .content span{
+  font-size: 24px;
+  color: #000;
+}
+
+.hero .container .content .roles{
+  font-weight: bold;
+}
+
+.logo{
+  height: 200px;
+  width: 200px;
+}
+
+.logo img{
+  height: 100%;
+  width: 100%;
+}
+
+button{
+  margin: 30px;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.footer{
+  padding: 10px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer span{
+  font-size: 11px;
+  color: #000;
+}
+
+.footer .version{
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px){
+  .hero .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero .container .content{
+    margin: 20px 0;
+    align-items: center;
+  }
+
+  button{
+    margin: 10px;
+  }
+  
+}
