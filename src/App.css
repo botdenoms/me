@@ -83,6 +83,7 @@ button{
   width: 100vw;
   display: flex;
   flex-direction: column;
+  background: #fff;
 }
 
 .appbar .top{
@@ -144,15 +145,144 @@ select{
 }
 
 .main{
-  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main .spacers{
+  height: 80px;
+}
+
+.main .content{
+  padding: 40px 10px;
 }
 
 .endnote{
+  height: auto;
   padding: 10px;
   width: 100%;
   display: flex;
   font-size: 11px;
   color: #000;
+}
+
+.icon{
+  height: 24px;
+  width: 24px;
+}
+
+.icon img{
+  height: 100%;
+  width: 100%;
+}
+
+.tools{
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+.tools h4{
+  margin-bottom: 5px;
+}
+
+.items{
+  display: flex;
+  flex-direction: column;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.item span{
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+.highlight{
+  margin: 20px 0;
+  height: 250px;
+  width: 100%;
+  background: #FF2355;
+}
+
+.more{
+  margin: 20px 0;
+  display: flex;
+  width: 100%;
+}
+
+.descript{
+  font-size: 17px;
+}
+
+.previews{
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery{
+  padding: 2px;
+  display: flex;
+  margin: 10px 0;
+  width: calc(.9 * 100vw);
+  height: 400px;
+  overflow-x: scroll;
+}
+
+.box{
+  height: 100%;
+  min-width: 250px;
+  background: #000;
+  margin-right: 8px;
+}
+
+.status, .feedback{
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.stage{
+  margin: 10px 0;
+}
+
+.stage span{
+  font-size: 16px;
+  color: #00000055;
+}
+
+.stage .level{
+  color: #038503;
+  font-weight: bold;
+}
+
+.source span{
+  font-size: 14px;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+.others{
+  margin: 10px 0;
+  display: flex;
+}
+
+.aob{
+  margin-right: 10px;
+}
+
+.feedback h4{
+  margin: 10px 0;
 }
 
 @media screen and (max-width: 600px){
@@ -178,6 +308,31 @@ select{
   .appbar .mobile{
     display: flex;
     justify-content: center;
+  }
+
+  .main .spacers{
+    height: 115px;
+  }
+
+  .main .content .topbar span{
+    font-size: 12px;
+  }
+
+  .highlight{
+    margin: 20px 0;
+    height: 250px;
+    width: 100%;
+    background: #FF2355;
+  }
+
+  .more{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tools{
+    margin-top: 40px;
+    margin-left: 0;
   }
   
 }

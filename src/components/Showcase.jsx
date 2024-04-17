@@ -8,6 +8,8 @@ import phone from '../assets/phone.svg'
 import email from '../assets/mail.svg'
 import dribble from '../assets/behance-original.svg'
 
+import software from '../assets/software.svg'
+
 function Showcase({handler = false}) {
 
     const [lang, setLang] = useState(0)
@@ -148,15 +150,123 @@ function Showcase({handler = false}) {
                 </div>
             </div>
 
-
-
             <div className="main">
+                <div className='spacers'></div>
 
+                <div className='content'>
+                    <div className="topbar">
+                        <h3>Macladie</h3>
+                        <span>Logo Design</span>
+                    </div>
+
+                    <div className="highlight">
+                        {/* splash image here */}
+                    </div>
+
+                    <div className="more">
+                        <div className='descript'>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br/> 
+                            Fuga odit voluptate, velit dolorem ipsa quam dolorum vero esse quos <br/>
+                            perferendis. Molestiae fugiat perferendis iste, <br/>
+                            voluptates doloremque rerum facere cumque mollitia!
+                        </div>
+
+                        <div className='tools'>
+                            <h4>Project Tools</h4>
+                            <div className="items">
+                                <div className="item">
+                                    <div className="icon">
+                                        <img src={software} alt="icon" />
+                                    </div>
+                                    <span>Inkscape</span>
+                                </div>
+                                <div className="item">
+                                    <div className="icon">
+                                        <img src={software} alt="icon" />
+                                    </div>
+                                    <span>Inkscape</span>
+                                </div>
+                                <div className="item">
+                                    <div className="icon">
+                                        <img src={software} alt="icon" />
+                                    </div>
+                                    <span>Inkscape</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="previews">
+                        <h4>Showcase</h4>
+                        <div className="gallery">
+                            <div className="box">
+                                {/* image here */}
+                            </div>
+                            <div className="box">
+                                {/* image here */}
+                            </div>
+                            <div className="box">
+                                {/* image here */}
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="status">
+                        <h4>Additional information</h4>
+                        <div className="stage">
+                            <span>Stage: </span>
+                            <span className='level'>Production</span>
+                        </div>
+
+                        <div className="source">
+                            <a href="https://" target="_blank" rel="noopener noreferrer">
+                                <div className="item">
+                                    <div className="icon">
+                                        <img src={github} alt="icon" />
+                                    </div>
+                                    <span>Repository</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div className="others">
+                            <a href="https://" target="_blank" rel="noopener noreferrer" className='aob'>
+                                <div className="item">
+                                    <div className="icon">
+                                        <img src={github} alt="icon" />
+                                    </div>
+                                    <span>Store</span>
+                                </div>
+                            </a>
+                            <a href="https://" target="_blank" rel="noopener noreferrer" className='aob'>
+                                <div className="item">
+                                    <div className="icon">
+                                        <img src={github} alt="icon" />
+                                    </div>
+                                    <span>Cloud</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className="feedback">
+                        <h4>Clients Feedback</h4>
+                        <div className="text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br/> 
+                        Fuga odit voluptate, velit dolorem ipsa quam dolorum vero esse quos <br/>
+                        perferendis. Molestiae fugiat perferendis iste, <br/>
+                        voluptates doloremque rerum facere cumque mollitia!
+                        </div>
+                    </div>
+
+                </div>
+
+                <div className='endnote'>
+                    <span>Denoms &copy; 2024</span>
+                </div>
             </div>
 
-            <div className='endnote'>
-                <span>Denoms &copy; 2024</span>
-            </div>
         </div>
     )
 }
