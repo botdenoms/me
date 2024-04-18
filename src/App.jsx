@@ -12,6 +12,14 @@ function App() {
     setHero(!hero)
   }
 
+  const getWorks= () =>{
+    // todo fetch works data from db
+    // connect to db
+    // fetch data
+    // handel error
+    // return [], error, msg
+  }
+
   return (
     <>
       {hero && <Hero handler={switchView}/>}

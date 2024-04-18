@@ -176,6 +176,7 @@ select{
 .icon img{
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 
 .tools{
@@ -206,9 +207,18 @@ select{
 
 .highlight{
   margin: 20px 0;
-  height: 250px;
+  height: 400px;
   width: 100%;
   background: #FF2355;
+}
+
+.pg{
+  margin: 20px;
+  display: flex;
+}
+
+.infor{
+  margin: 0 15px;
 }
 
 .more{
@@ -232,7 +242,7 @@ select{
   margin: 10px 0;
   width: calc(.9 * 100vw);
   height: 400px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .box{
@@ -285,6 +295,59 @@ a{
   margin: 10px 0;
 }
 
+.loader{
+  height: calc(100vh * .65);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottle{
+  position: relative;
+  height: 40px;
+  width: 18px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fill{
+  width: 100%;
+  height: 100%;
+  background: #238aff;
+  animation: load 200ms ease-in-out infinite;
+  transform: translateY(-40px);
+}
+
+.filled{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #0552aa;
+  animation: fillUp 4s ease-in-out infinite;
+  transform: translateY(40px);
+}
+
+@keyframes load{
+  0%{
+    transform: translateY(-40px);
+  }
+  100%{
+    transform: translateY(40px);
+  }
+}
+
+@keyframes fillUp{
+  0%{
+    transform: translateY(40px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
 @media screen and (max-width: 600px){
   .hero .container{
     display: flex;
@@ -334,5 +397,8 @@ a{
     margin-top: 40px;
     margin-left: 0;
   }
-  
+
+  .highlight{
+    height: 250px;
+  }
 }
