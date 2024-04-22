@@ -3,6 +3,8 @@ import './App.css'
 import Hero from './components/Hero'
 import Showcase from './components/Showcase'
 
+import { worksList } from './works'
+
 function App() {
   // state
   const [hero, setHero] = useState(true)
@@ -13,17 +15,17 @@ function App() {
   }
 
   const getWorks= () =>{
-    // todo fetch works data from db
-    // connect to db
-    // fetch data
-    // handel error
-    // return [], error, msg
+    return {
+      items: worksList,
+      error: false,
+      msg: ''
+    }
   }
 
   return (
     <>
       {hero && <Hero handler={switchView}/>}
-      {!hero && <Showcase handler={switchView}/>}
+      {!hero && <Showcase handler={switchView} worksHandler={getWorks}/>}
     </>
   )
 }

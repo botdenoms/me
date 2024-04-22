@@ -12,6 +12,14 @@ import software from '../assets/software.svg'
 import prev from '../assets/prev.svg'
 import next from '../assets/next.svg'
 
+import figma from '../assets/figma-original.svg'
+import flask from '../assets/flask-original-wordmark.svg'
+import flutter from '../assets/flutter-original.svg'
+import python from '../assets/python-original.svg'
+import selenium from '../assets/selenium-original.svg'
+import reactLogo from '../assets/react-original.svg'
+import firebase from '../assets/firebase-plain-wordmark.svg'
+
 function Showcase({handler = false, worksHandler=false}) {
 
     const [lang, setLang] = useState(0)
@@ -51,15 +59,46 @@ function Showcase({handler = false, worksHandler=false}) {
         // handle internationalization : todo
     }
 
+    const iconData = (name) =>{
+        switch (name) {
+            case 'Figma':
+                return figma
+            case 'Flask':
+                return flask;
+            case 'Flutter':
+                return flutter
+            case 'Python':
+                return python
+            case 'Selenium':
+                return selenium
+            case 'React':
+                return reactLogo
+            case 'Firebase':
+                return firebase
+            case 'Vite':
+                return reactLogo
+            default:
+                return software
+        }
+        
+    }
+
     const workSwitch = (next=true) =>{
         // handle work data switch
         if(next){
+            if (idx + 1 === works.length) {
+                return
+            }
+            setFetch(true)
             setIdx(idx + 1)
+            setTimeout(()=>{setFetch(false)}, 1000)
         }else{
             if (idx === 0) {
                 return
             }
+            setFetch(true)
             setIdx(idx - 1)
+            setTimeout(()=>{setFetch(false)}, 1000)
         }
 
     }
@@ -84,7 +123,7 @@ function Showcase({handler = false, worksHandler=false}) {
 
                     <div className="links">
                         <div className='link'>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/dennis-moseti-0836a523b" target="_blank" rel="noopener noreferrer">
                                 <img src={linkedin} alt="logo" />
                             </a>
                             <div className="tooltip">
@@ -109,7 +148,7 @@ function Showcase({handler = false, worksHandler=false}) {
                             </div>
                         </div>
                         <div className='link'>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://twitter.com/botdenoms" target="_blank" rel="noopener noreferrer">
                                 <img src={twitter} alt="logo" />
                             </a>
                             <div className="tooltip">
@@ -117,7 +156,7 @@ function Showcase({handler = false, worksHandler=false}) {
                             </div>
                         </div>
                         <div className='link'>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="tel:+254727292322" target="_blank" rel="noopener noreferrer">
                                 <img src={phone} alt="logo" />   
                             </a>
                             <div className="tooltip">
@@ -125,7 +164,7 @@ function Showcase({handler = false, worksHandler=false}) {
                             </div>
                         </div>
                         <div className='link'>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="mailto:denomsupdated@gmail.com" target="_blank" rel="noopener noreferrer">
                                 <img src={email} alt="logo" />
                             </a>
                             <div className="tooltip">
@@ -146,7 +185,7 @@ function Showcase({handler = false, worksHandler=false}) {
 
                 <div className="links mobile">
                     <div className='link'>
-                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/dennis-moseti-0836a523b" target="_blank" rel="noopener noreferrer">
                             <img src={linkedin} alt="logo" />
                         </a>
                         <div className="tooltip">
@@ -171,7 +210,7 @@ function Showcase({handler = false, worksHandler=false}) {
                         </div>
                     </div>
                     <div className='link'>
-                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <a href="https://twitter.com/botdenoms" target="_blank" rel="noopener noreferrer">
                             <img src={twitter} alt="logo" />
                         </a>
                         <div className="tooltip">
@@ -179,7 +218,7 @@ function Showcase({handler = false, worksHandler=false}) {
                         </div>
                     </div>
                     <div className='link'>
-                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <a href="tel:+254727292322" target="_blank" rel="noopener noreferrer">
                             <img src={phone} alt="logo" />   
                         </a>
                         <div className="tooltip">
@@ -187,7 +226,7 @@ function Showcase({handler = false, worksHandler=false}) {
                         </div>
                     </div>
                     <div className='link'>
-                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <a href="mailto:denomsupdated@gmail.com" target="_blank" rel="noopener noreferrer">
                             <img src={email} alt="logo" />
                         </a>
                         <div className="tooltip">
@@ -204,7 +243,6 @@ function Showcase({handler = false, worksHandler=false}) {
                     fetch &&
                     <div className="loader">
                         <div className="bottle">
-                            <div className="fill"></div>
                             <div className="filled"></div>
                         </div>
                     </div>
@@ -217,78 +255,88 @@ function Showcase({handler = false, worksHandler=false}) {
                     </div>
                 }
 
-                {/* logic for empty works data */}
+                {
+                    !fetch && !err && works.length === 0 &&
+                    <div className="loader">
+                        <span>No works data found</span>
+                    </div>
+                }
 
                 {
-                    !fetch && !err &&
+                    !fetch && !err && works.length !== 0 &&
                     <div className='content'>
                         <div className="topbar">
-                            <h3>Macladie</h3>
-                            <span>Logo Design</span>
+                            <h3>{works[idx].title}</h3>
+                            <span>{works[idx].category}</span>
                         </div>
 
-                        <div className="highlight">
-                            {/* splash image here */}
+                        <div className={works[idx].thumbnail === ""?'blank':"highlight"}>
+                            {
+                                works[idx].thumbnail === "" &&
+                                <span>No image data found</span>
+                            }
+                            {
+                                works[idx].thumbnail !== "" &&
+                                <img src={works[idx].thumbnail} alt="thumb" />
+                            }
                         </div>
 
                         <div className="more">
                             <div className='descript'>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br/> 
-                                Fuga odit voluptate, velit dolorem ipsa quam dolorum vero esse quos <br/>
-                                perferendis. Molestiae fugiat perferendis iste, <br/>
-                                voluptates doloremque rerum facere cumque mollitia!
+                                {works[idx].description}
                             </div>
 
                             <div className='tools'>
                                 <h4>Project Tools</h4>
                                 <div className="items">
-                                    <div className="item">
-                                        <div className="icon">
-                                            <img src={software} alt="icon" />
-                                        </div>
-                                        <span>Inkscape</span>
-                                    </div>
-                                    <div className="item">
-                                        <div className="icon">
-                                            <img src={software} alt="icon" />
-                                        </div>
-                                        <span>Inkscape</span>
-                                    </div>
-                                    <div className="item">
-                                        <div className="icon">
-                                            <img src={software} alt="icon" />
-                                        </div>
-                                        <span>Inkscape</span>
-                                    </div>
+                                    {
+                                        works[idx].tools.map((v, i)=>{
+                                            const isrc = iconData(v)
+                                            return (
+                                                <div className="item" key={i}>
+                                                    <div className="icon">
+                                                        <img src={isrc} alt="icon" />
+                                                    </div>
+                                                    <span>{v}</span>
+                                                </div>
+                                            )
+                                        })
+                                    }
                                 </div>
                             </div>
                         </div>
 
                         <div className="previews">
                             <h4>Showcase</h4>
-                            <div className="gallery">
-                                <div className="box">
-                                    {/* image here */}
-                                </div>
-                                <div className="box">
-                                    {/* image here */}
-                                </div>
-                                <div className="box">
-                                    {/* image here */}
-                                </div>
+                            <div className={works[idx].showcase.length === 0 ?'':"gallery"}>
+                                {
+                                    works[idx].showcase.map((v, i)=>{
+                                        return (
+                                            <div className="box" key={i}>
+                                                {/* image here */}
+                                                <img src={v} alt="icon" />
+                                            </div>
+                                        )
+                                    })
+                                }
+                                {
+                                    works[idx].showcase.length === 0 &&
+                                    <div className="notice">
+                                        No showcase data found
+                                    </div>
+                                }
                             </div>
-
                         </div>
 
                         <div className="status">
                             <h4>Additional information</h4>
                             <div className="stage">
                                 <span>Stage: </span>
-                                <span className='level'>Production</span>
+                                <span className='level'>{works[idx].stage}</span>
                             </div>
 
                             <div className="source">
-                                <a href="https://" target="_blank" rel="noopener noreferrer">
+                                <a href={works[idx].repo} target="_blank" rel="noopener noreferrer">
                                     <div className="item">
                                         <div className="icon">
                                             <img src={github} alt="icon" />
@@ -299,32 +347,29 @@ function Showcase({handler = false, worksHandler=false}) {
                             </div>
 
                             <div className="others">
-                                <a href="https://" target="_blank" rel="noopener noreferrer" className='aob'>
-                                    <div className="item">
-                                        <div className="icon">
-                                            <img src={github} alt="icon" />
-                                        </div>
-                                        <span>Store</span>
-                                    </div>
-                                </a>
-                                <a href="https://" target="_blank" rel="noopener noreferrer" className='aob'>
-                                    <div className="item">
-                                        <div className="icon">
-                                            <img src={github} alt="icon" />
-                                        </div>
-                                        <span>Cloud</span>
-                                    </div>
-                                </a>
+                                {
+                                works[idx].otherlinks.map((v, i)=>{
+                                        return (
+                                            <a href={v.link} key={i} target="_blank" rel="noopener noreferrer" className='aob'>
+                                                <div className="item">
+                                                    <div className="icon">
+                                                        <img src={github} alt="icon" />
+                                                    </div>
+                                                    <span>{v.store}</span>
+                                                </div>
+                                            </a>
+                                        )
+                                    })
+                                }
                             </div>
                         </div>
 
                         <div className="feedback">
                             <h4>Clients Feedback</h4>
                             <div className="text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br/> 
-                            Fuga odit voluptate, velit dolorem ipsa quam dolorum vero esse quos <br/>
-                            perferendis. Molestiae fugiat perferendis iste, <br/>
-                            voluptates doloremque rerum facere cumque mollitia!
+                                {
+                                    works[idx].feedback === ''? 'No feedback Given': works[idx].feedback
+                                }
                             </div>
                         </div>
 
@@ -336,7 +381,7 @@ function Showcase({handler = false, worksHandler=false}) {
                         <img src={prev} alt="icon" />
                     </div>
                     <div className="infor">
-                        <span>{idx} / {works.length}</span>
+                        <span>{idx + 1} / {works.length}</span>
                     </div>
                     <div className="icon" onClick={()=>{workSwitch(true)}}>
                         <img src={next} alt="icon" />
