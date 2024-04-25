@@ -131,7 +131,7 @@ function Showcase({handler = false, worksHandler=false}) {
                             </div>
                         </div>
                         <div className='link'>
-                            <a href="http://github.com/botdenoms" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/botdenoms" target="_blank" rel="noopener noreferrer">
                                 <img src={github} alt="logo" />
                             </a>
                             <div className="tooltip">
@@ -139,7 +139,7 @@ function Showcase({handler = false, worksHandler=false}) {
                             </div>
                         </div>
                         <div className='link'>
-                            <a href="http://dribble.com/denoms" target="_blank" rel="noopener noreferrer">
+                            <a href="https://dribble.com/denoms" target="_blank" rel="noopener noreferrer">
                                 <img src={dribble} alt="logo" />
                             </a>
                             
@@ -193,7 +193,7 @@ function Showcase({handler = false, worksHandler=false}) {
                         </div>
                     </div>
                     <div className='link'>
-                        <a href="http://github.com/botdenoms" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/botdenoms" target="_blank" rel="noopener noreferrer">
                             <img src={github} alt="logo" />
                         </a>
                         <div className="tooltip">
@@ -201,7 +201,7 @@ function Showcase({handler = false, worksHandler=false}) {
                         </div>
                     </div>
                     <div className='link'>
-                        <a href="http://dribble.com/denoms" target="_blank" rel="noopener noreferrer">
+                        <a href="https://dribble.com/denoms" target="_blank" rel="noopener noreferrer">
                             <img src={dribble} alt="logo" />
                         </a>
                         
