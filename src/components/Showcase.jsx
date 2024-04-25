@@ -108,7 +108,7 @@ function Showcase({handler = false, worksHandler=false}) {
             // call fetch function for works data
             workHandler()
             setFetch(false)
-        }, 4000)
+        }, 2000)
     }, [])
     
 
@@ -243,7 +243,9 @@ function Showcase({handler = false, worksHandler=false}) {
                     fetch &&
                     <div className="loader">
                         <div className="bottle">
-                            <div className="filled"></div>
+                            <div className="ring"></div>
+                            <div className="ring d1"></div>
+                            <div className="ring d2"></div>
                         </div>
                     </div>
                 }
