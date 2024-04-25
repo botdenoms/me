@@ -131,6 +131,7 @@ select{
 }
 
 .tooltip{
+  position: absolute;
   display: none;
   padding: 4px 8px;
   background: #000;
@@ -209,7 +210,12 @@ select{
   margin: 20px 0;
   height: 400px;
   width: 100%;
-  background: #FF2355;
+}
+
+.highlight img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .pg{
@@ -246,19 +252,24 @@ select{
 }
 
 .gallery{
-  padding: 2px;
   display: flex;
   margin: 10px 0;
   width: calc(.9 * 100vw);
   height: 400px;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .box{
   height: 100%;
   min-width: 250px;
-  background: #000;
   margin-right: 8px;
+}
+
+.box img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .status, .feedback{
@@ -396,7 +407,7 @@ a{
   }
 
   .highlight{
-    margin: 20px 0;
+    /* margin: 20px 0; */
     height: 250px;
     width: 100%;
   }
@@ -409,10 +420,6 @@ a{
   .tools{
     margin-top: 40px;
     margin-left: 0;
-  }
-
-  .highlight{
-    height: 250px;
   }
 
   .descript{

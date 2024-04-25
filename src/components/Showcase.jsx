@@ -276,7 +276,7 @@ function Showcase({handler = false, worksHandler=false}) {
                                 <span>No image data found</span>
                             }
                             {
-                                works[idx].thumbnail !== "" &&
+                                works[idx].thumbnail !== "" && 
                                 <img src={works[idx].thumbnail} alt="thumb" />
                             }
                         </div>
@@ -310,6 +310,7 @@ function Showcase({handler = false, worksHandler=false}) {
                             <h4>Showcase</h4>
                             <div className={works[idx].showcase.length === 0 ?'':"gallery"}>
                                 {
+                                    works[idx].showcase.length !== 0 &&
                                     works[idx].showcase.map((v, i)=>{
                                         return (
                                             <div className="box" key={i}>
@@ -381,7 +382,10 @@ function Showcase({handler = false, worksHandler=false}) {
                         <img src={prev} alt="icon" />
                     </div>
                     <div className="infor">
-                        <span>{idx + 1} / {works.length}</span>
+                        <span>
+                            {
+                                works.length === 0 ? 0 + ' ' : idx + 1 + " "
+                            }/ {works.length}</span>
                     </div>
                     <div className="icon" onClick={()=>{workSwitch(true)}}>
                         <img src={next} alt="icon" />
