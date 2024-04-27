@@ -19,6 +19,7 @@ import python from '../assets/python-original.svg'
 import selenium from '../assets/selenium-original.svg'
 import reactLogo from '../assets/react-original.svg'
 import firebase from '../assets/firebase-plain-wordmark.svg'
+import web from '../assets/web.svg'
 
 function Showcase({handler = false, worksHandler=false}) {
 
@@ -78,7 +79,7 @@ function Showcase({handler = false, worksHandler=false}) {
             case 'Vite':
                 return reactLogo
             default:
-                return software
+                return web
         }
         
     }
@@ -352,11 +353,12 @@ function Showcase({handler = false, worksHandler=false}) {
                             <div className="others">
                                 {
                                 works[idx].otherlinks.map((v, i)=>{
+                                        const isrc = iconData(v.store)
                                         return (
                                             <a href={v.link} key={i} target="_blank" rel="noopener noreferrer" className='aob'>
                                                 <div className="item">
                                                     <div className="icon">
-                                                        <img src={github} alt="icon" />
+                                                        <img src={isrc} alt="icon" />
                                                     </div>
                                                     <span>{v.store}</span>
                                                 </div>
