@@ -66,8 +66,10 @@ export const worksList = [
             'https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2Fportfolio%2Fportfolio%201.png?alt=media&token=f0c5a256-17b0-4da9-87dc-1e703c6a36c8'
         ],
         stage: 'Production',
-        repo: '',
-        otherlinks: [],
+        repo: 'https://github.com/botdenoms/me',
+        otherlinks: [
+            {link: 'https://dennismosetio.web.app/', store: 'Web'}
+        ],
         feedback: `My personal portfolio website, a simple, minimalistic website.\n
         \n
         `
