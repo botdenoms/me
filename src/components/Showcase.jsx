@@ -20,6 +20,7 @@ import selenium from '../assets/selenium-original.svg'
 import reactLogo from '../assets/react-original.svg'
 import firebase from '../assets/firebase-plain-wordmark.svg'
 import web from '../assets/web.svg'
+import Footer from './Footer'
 
 function Showcase({handler = false, worksHandler=false}) {
 
@@ -29,6 +30,8 @@ function Showcase({handler = false, worksHandler=false}) {
     const [msg, setMsg] = useState('')
     const [idx, setIdx] = useState(0)
     const [works, setWorks] = useState([])
+
+    const dt = new Date(Date.now())
 
     const viewHandler = () => {
         if(handler == false){
@@ -397,7 +400,7 @@ function Showcase({handler = false, worksHandler=false}) {
                 </div>
 
                 <div className='endnote'>
-                    <span>Denoms &copy; 2024</span>
+                    <span>Denoms &copy; {dt.getFullYear()}</span>
                 </div>
             </div>
 
