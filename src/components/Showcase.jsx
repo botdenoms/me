@@ -143,7 +143,7 @@ function Showcase({handler = false, worksHandler=false}) {
                             </div>
                         </div>
                         <div className='link'>
-                            <a href="https://dribble.com/denoms" target="_blank" rel="noopener noreferrer">
+                            <a href="https://dribbble.com/denoms" target="_blank" rel="noopener noreferrer">
                                 <img src={dribble} alt="logo" />
                             </a>
                             
@@ -205,7 +205,7 @@ function Showcase({handler = false, worksHandler=false}) {
                         </div>
                     </div>
                     <div className='link'>
-                        <a href="https://dribble.com/denoms" target="_blank" rel="noopener noreferrer">
+                        <a href="https://dribbble.com/denoms" target="_blank" rel="noopener noreferrer">
                             <img src={dribble} alt="logo" />
                         </a>
                         
