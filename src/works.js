@@ -2,7 +2,7 @@ export const worksList = [
     {
         title: 'Medeasy',
         category: 'Mobile app',
-        thumbnail: 'https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2Fmedeasy%20showcase%202.png?alt=media&token=d18a5a01-0c7e-4fb0-ba22-de799597f5f8',
+        thumbnail: '../imgs/medesy showcase.png',
         description: `A mobile application offering remote or online diagnosis services.
         This services is enabled by bringing all involved stakeholder:  
         specialized doctor, health and test facilities and the users requiring the services. 
@@ -16,10 +16,10 @@ export const worksList = [
             'Figma',
         ],
         showcase: [
-            'https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2FScreenshot_20240419-231057.png?alt=media&token=34a26967-e341-4cd1-b069-c01e245f0bfc',
-            'https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2Fmedesy%201%20.png?alt=media&token=20827d24-d52a-40b5-96b7-b15b3b12b0af', 
-            'https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2FScreenshot_20240419-231459.png?alt=media&token=51e871b5-422e-4f39-8d5e-10dcf1a1ca24', 
-            'https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2FScreenshot_20240419-231158.png?alt=media&token=5f70bf7b-4a4e-431a-99cf-0acaeeef3e50'
+            '../imgs/medesy 1 .png',
+            '../imgs/medesy 2.png', 
+            '../imgs/medesy 3.png', 
+            '../imgs/medesy 4.png'
         ],
         stage: 'Development',
         repo: 'https://github.com/botdenoms/medeasy',
@@ -31,7 +31,7 @@ export const worksList = [
     {
         title: 'Url2pdf',
         category: 'Python Flask api',
-        thumbnail: 'https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2Furl2pdf%2Furl2pdf%20show.png?alt=media&token=3437ce59-a5e7-456c-9942-f26e29d0388d',
+        thumbnail: '../imgs/url2pdf show.png',
         description: `Converts a given url links to a pdf file. Requests made to \n
         the REST api accepts website urls as the parameter, \n
         the api returns a json object. The json object contains the given url \n
@@ -43,7 +43,10 @@ export const worksList = [
             'Flask',
             'Selenium',
         ],
-        showcase: ['https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2Furl2pdf%2Furl2pdf%202.png?alt=media&token=87e0f346-8b09-489b-9aad-5ecd566cd12e', 'https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2Furl2pdf%2Furl2pdf%201.png?alt=media&token=3a0bdbfd-896a-4b85-8458-41d37be62e72'],
+        showcase: [
+            '../imgs/url2pdf 1.png',
+            '../imgs/url2pdf 2.png'
+        ],
         stage: 'Production',
         repo: 'https://github.com/botdenoms/url2pdf',
         otherlinks: [],
@@ -52,7 +55,7 @@ export const worksList = [
     {
         title: 'Portfolio',
         category: 'Webiste',
-        thumbnail: 'https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2Fportfolio%2Fportfolio%20showcs.png?alt=media&token=3cf68f33-87d6-4840-bf36-f766eeb99244',
+        thumbnail: '../imgs/portfolio showcs.png',
         description: `My portfolio website, a static website showcasing my works.
         Contact links on how to find me and more information.
         `,
@@ -61,9 +64,9 @@ export const worksList = [
             'Figma',
         ],
         showcase: [
-            'https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2Fportfolio%2Fportfolio%203.png?alt=media&token=53d7fdf5-5711-4449-ab60-eb3e578bb5c7', 
-            'https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2Fportfolio%2Fportfolio%202.png?alt=media&token=593f51a4-e54d-4bff-a289-6240ff3e5e24', 
-            'https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2Fportfolio%2Fportfolio%201.png?alt=media&token=f0c5a256-17b0-4da9-87dc-1e703c6a36c8'
+            '../imgs/portfolio 1.png', 
+            '../imgs/portfolio 2.png', 
+            '../imgs/portfolio 3.png'
         ],
         stage: 'Production',
         repo: 'https://github.com/botdenoms/me',
@@ -77,7 +80,7 @@ export const worksList = [
     {
         title: 'Offerske',
         category: 'Python app',
-        thumbnail: 'https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2Fofferske%2Fofferske%20show.png?alt=media&token=08331cc7-08c7-451c-8044-bc41ce7fdf55',
+        thumbnail: '../imgs/offerske show.png',
         description: `A Scrapy python app: using scrapy package, this program scraps flash sale offer 
         on jumia e-commerce websit. \n
         Supports exporting scrapped data in scapy supported types, json, csv, pickle. \n
@@ -88,7 +91,7 @@ export const worksList = [
             'Scrapy'
         ],
         showcase: [
-            'https://firebasestorage.googleapis.com/v0/b/dennismosetio.appspot.com/o/images%2Fofferske%2Foffers%202.png?alt=media&token=a2cb7a57-7992-4b0b-aa49-2529cfe5ca21'
+            '../imgs/offers 2.png'
         ],
         stage: 'Production',
         repo: 'https://github.com/botdenoms/offerske',
